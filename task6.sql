@@ -3,8 +3,8 @@
  CREATE DATABASE hw6;
  USE hw6;
  
- -- 1.	Создайте функцию, которая принимает кол-во сек и форматирует их в кол-во дней, часов, минут и секунд.
--- Пример: 123456 ->'1 days 10 hours 17 minutes 36 seconds'
+ -- 1.	Создайте функцию, которая принимает кол-во сек и формат их в кол-во дней часов.
+-- Пример: 123456 ->'1 days 10 hours 17 minutes 36 seconds '
 DROP PROCEDURE IF EXISTS format_date;
 DELIMITER //
 CREATE PROCEDURE format_date
@@ -62,8 +62,8 @@ CALL format_date(123456, @res);
 SELECT @res;
 
 
--- 2. Выведите только четные числа от 1 до 10 включительно. (Через функцию / процедуру)
--- Пример: 2,4,6,8,10 (можно сделать через шаг +  2: х = 2, х+=2)
+-- 2. Выведите только четные числа от 1 до 10. 
+-- Пример: 2,4,6,8,10 
 DROP FUNCTION IF EXISTS get_nums;
 DELIMITER //
 CREATE FUNCTION get_nums()
